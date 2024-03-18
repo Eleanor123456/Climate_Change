@@ -1,6 +1,9 @@
 from os import system
 import turtle
 import time
+import p2
+
+p2.start_function()
 
 screen = turtle.Screen()
 screen.setup(400,400)
@@ -56,6 +59,12 @@ def plant_trees(num_trees):
   
 def main():
   num_trees=0
+  def start_function():
+    print("Welcome to the game!\n\nWould you like to play part 1 or part 2?")
+    answer=input("Type PART 1 for part 1")
+    if answer=="PART 1":
+      system("clear")
+  p2.start_function()
   print("Welcome to the game!\n\nMake sure to type your answers in all caps!\n")
   answer=input("Type START to start the game")
   if answer=="START":
@@ -158,9 +167,9 @@ def main():
                   num_trees = plant_trees(num_trees)
                 elif answer in["B","C","D"]:
                   system("clear")
-                    print("You are incorrect :(\n")
-                    print("trees planted: "+ str(num_trees))
-                    print("\nThe correct answer is A. The ocean actually absorbs most of the"
+                  print("You are incorrect :(\n")
+                  print("trees planted: "+ str(num_trees))
+                  print("\nThe correct answer is A. The ocean actually absorbs most of the"
                     " heat we produce! So if we want to save the ocean and the animals living"
                     " in the ocean, we should all work to stop climate change.")
                 answer=input("\nType 1 to continue")
@@ -206,7 +215,9 @@ def main():
                   answer=input("\nType 1 to continue")
                   if answer=="1":
                     system("clear")
-  print("THE END!!\nThank you for playing")
+print("THE END OF PART 1!!\nThank you for playing")
+
+p2.start_function()
 
 
 
