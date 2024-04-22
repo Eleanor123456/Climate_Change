@@ -18,37 +18,76 @@ def end_function():
   answer=input("Type PART 1 for part 1")
   if answer=="PART 1":
     system("clear")
-    print("")
   answer=input("Type PART 2 for part 2")
 
 
 def part_2function():
-  system("clear")
-  print("Would you like to order food in bulk, which is more than you need, but cheaper, (option A) or go to the farmer's market to buy fresh produce (option B)")
+  print("Do you take time to plan a grocery list(option A) or go straight to the store(option B)")
   answer = input("\nType your answer here ")
   if answer == "A":
     system("clear")
-    print("you lost 10pts and gained $10")
+    print("you gain 10pts and $10")
   elif answer == "B":
     system("clear")
-    print("you gain 10pts")
-  answer2 = input("type 1 to continue")
+    print("you lose $10")
+  answer2 == input("type 1 to continue")
   if answer2 == "1":
     system("clear")
-    print("You find a tomato with a brusise. Do you throw it away (A) or Do you keep it (B)")
+    print("would you like to spend time to research appropriate serving size (A) or guess (B)")
+    answer = input("\nType your answer here ")
+    if answer == "A":
+      system("clear")
+      print("you gain 10pts and lose $10")
+    elif answer == "B":
+     system("clear")
+     print("you lose 10pts")
+  answer2 == input("type 1 to continue")
+  if answer2 == "1":
+    system("clear")
+    print("Would you like to order food in bulk, which is more than you need, but cheaper,   (A) or go to the farmer's market to buy fresh produce (B)")
+    answer = input("\nType your answer here ")
     if answer == "A":
       system("clear")
       print("you lost 10pts and gained $10")
     elif answer == "B":
-      system("clear")
-      print("you gain 10pts")
+     system("clear")
+     print("you gain 10pts")
   answer2 = input("type 1 to continue")
   if answer2 == "1":
     system("clear")
-    print("")
+    print("At the store you find tomatoes that are misshapen and cheaper than the other tomatoes. Do you buy them (A) or not (B)")
     if answer == "A":
       system("clear")
-      print("you lost 10pts and gained $10")
+      print("you gain 10pts and $10")
+    elif answer == "B":
+      system("clear")
+      print("you lost 10pts and $10")
+  answer2 = input("type 1 to continue")
+  if answer2 == "1":
+    system("clear")
+    print("you cut up some veggies do you chose to leave them on the counter(A) or put them in the fridge(B)")
+    if answer == "A":
+      system("clear")
+      print("you lose 10pts")
+    if answer == "B":
+      system("clear")
+      print("you gain 10pts")
+  if answer2 == "1":
+    system("clear")
+    print("It is almost time to close the restaurant and you have lots of food left do you want to give it away for free(A) or not(B)")
+    if answer == "A":
+      system("clear")
+      print("you gain 10pts and lose $10")
+    elif answer == "B":
+      system("clear")
+      print("you lose 10pts")
+  answer2 = input("type 1 to continue")
+  if answer2 == "1":
+    system("clear")
+    print("You still have food left over do you choose to throw it away (A) or freeze it (B)")
+    if answer == "A":
+      system("clear")
+      print("you lost 10pts")
     elif answer == "B":
       system("clear")
       print("you gain 10pts")
