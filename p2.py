@@ -1,6 +1,8 @@
 from os import system
 import turtle
 
+from main import display_points
+
 points = 10
 dollars = 100
 
@@ -22,15 +24,21 @@ def end_function():
 
 
 def part_2function():
-  print("Do you take time to plan a grocery list(option A) or go straight to the store(option B)")
+  global points
+  global dollars
+  print("Do you take time to plan a grocery list(option A) or go straight to the store (option B)")
   answer = input("\nType your answer here ")
   if answer == "A":
     system("clear")
     print("you gain 10pts and $10")
+    points = points+10
+    dollars = dollars+10
   elif answer == "B":
     system("clear")
     print("you lose $10")
-  answer2 == input("type 1 to continue")
+    dollars = dollars-10
+  display_points(points,dollars)
+  answer2 = input("type 1 to continue")
   if answer2 == "1":
     system("clear")
     print("would you like to spend time to research appropriate serving size (A) or guess (B)")
@@ -38,20 +46,28 @@ def part_2function():
     if answer == "A":
       system("clear")
       print("you gain 10pts and lose $10")
+      points = points+10
+      dollars = dollars-10
     elif answer == "B":
      system("clear")
      print("you lose 10pts")
-  answer2 == input("type 1 to continue")
+     points = points-10
+  display_points(points,dollars)
+  answer2 = input("type 1 to continue")
   if answer2 == "1":
     system("clear")
-    print("Would you like to order food in bulk, which is more than you need, but cheaper,   (A) or go to the farmer's market to buy fresh produce (B)")
+    print("Would you like to order food in bulk, which is more than you need, but cheaper, (A) or go to the farmer's market to buy fresh produce (B)")
     answer = input("\nType your answer here ")
     if answer == "A":
       system("clear")
       print("you lost 10pts and gained $10")
+      points = points-10
+      dollars=dollars+10
     elif answer == "B":
      system("clear")
      print("you gain 10pts")
+     points = points+10
+  display_points(points,dollars)
   answer2 = input("type 1 to continue")
   if answer2 == "1":
     system("clear")
@@ -59,9 +75,14 @@ def part_2function():
     if answer == "A":
       system("clear")
       print("you gain 10pts and $10")
+      points = points+10
+      dollars = dollars+10
     elif answer == "B":
       system("clear")
       print("you lost 10pts and $10")
+      points = points-10
+      dollars = dollars-10
+  display_points(points,dollars)
   answer2 = input("type 1 to continue")
   if answer2 == "1":
     system("clear")
@@ -69,18 +90,25 @@ def part_2function():
     if answer == "A":
       system("clear")
       print("you lose 10pts")
-    if answer == "B":
+      points = points-10
+    elif answer == "B":
       system("clear")
       print("you gain 10pts")
+      points = points+10
+  display_points(points,dollars)
   if answer2 == "1":
     system("clear")
     print("It is almost time to close the restaurant and you have lots of food left do you want to give it away for free(A) or not(B)")
     if answer == "A":
       system("clear")
       print("you gain 10pts and lose $10")
+      points = points+10
+      dollars = dollars-10
     elif answer == "B":
       system("clear")
       print("you lose 10pts")
+      points = points-10
+  display_points(points,dollars)
   answer2 = input("type 1 to continue")
   if answer2 == "1":
     system("clear")
@@ -88,9 +116,12 @@ def part_2function():
     if answer == "A":
       system("clear")
       print("you lost 10pts")
+      points = points-10
     elif answer == "B":
       system("clear")
       print("you gain 10pts")
+      points = points+10
+    display_points(points,dollars)
     answer2 = input("type 1 to continue")
     if answer2 == "1":
       system("clear")

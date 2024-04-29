@@ -41,7 +41,22 @@ tom.write("Hi!")
 #tom._delay(4000)
 tom.clear()
 tom.hideturtle()
+screen.bgpic("nopic")
 
+
+
+
+bob = turtle.Turtle()
+
+def display_points(points,dollars):
+  bob.clear()
+  bob.pendown()
+  bob.write(points)
+  bob.penup()
+  bob.backward(90)
+  bob.pendown()
+  bob.write(dollars)
+  bob.forward(90)
 
 def main():
 
