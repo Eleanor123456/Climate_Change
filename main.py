@@ -9,15 +9,7 @@ x = 0
 screen.bgpic("background1.gif")
 time.sleep(2)
 tree = ("best-tree.gif")
-onion = ("onions.gif")
-corn = ("corn.gif")
-lettuce = ("lettuce.gif")
-tomato = ("tomato.gif")
-steak = ("steak for tacos.gif")
-chicken = ("chicken for taco.gif")
 screen.addshape(tree)
-screen.addshape(onion)
-screen.addshape(corn)
 
 screen.bgpic("background2.gif")
 screen.update()
@@ -61,18 +53,18 @@ bob.goto(80,100)
 def display_points(points,dollars):
   bob.clear()
   bob.pendown()
-  bob.write(str(points)+"pts",font=("arial",30,"normal"))
+  bob.write(str(points)+"pts",font=("arial",25,"normal"))
   bob.penup()
   bob.backward(200)
   bob.pendown()
-  bob.write("$"+str(dollars),font=("arial",30,"normal"))
+  bob.write("$"+str(dollars),font=("arial",25,"normal"))
   bob.penup()
   bob.forward(200)
 
 def main():
 
   
-  p2.start_function(tree_list, tree, onion,screen,corn,chicken,lettuce,steak,tomato)
+  p2.start_function(tree_list, tree,screen)
   p2.end_function()
 
 

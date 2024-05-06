@@ -7,13 +7,13 @@ points = 10
 dollars = 100
 food_type = 0
 
-def start_function(tree_list, tree,onion,screen,corn,chicken,lettuce,steak,tomato):
+def start_function(tree_list, tree,screen):
   print("Welcome to the game!\n\nWould you like to play part 1 or part 2?")
   answer=input("Type PART 1 for part 1")
   if answer=="PART 1":
     part_1function(tree_list, tree)
   if answer=="PART 2":
-    part_2function(onion,screen,corn,chicken,lettuce,steak,tomato)
+    part_2function(screen)
     
 
 def end_function():
@@ -24,7 +24,7 @@ def end_function():
   answer=input("Type PART 2 for part 2")
 
 
-def part_2function(onion,screen,corn,chicken,lettuce,steak,tomato):
+def part_2function(screen):
   global points
   global dollars
   global food_type
@@ -323,15 +323,7 @@ def rat(click):
   joe.pendown()
   joe.write(click)
   joe.forward(90)
-def tacoChef(onion,screen,corn,chicken,lettuce,steak,tomato):
-  global food_type
-  click = 0
-  joe = turtle.Turtle()
-  food_type = food_type+1
-  joe.shape(onion)
-  screen.delay(3000)
-  joe.shape(corn)
-  joe.onclick(rat)
+
 
   
 
