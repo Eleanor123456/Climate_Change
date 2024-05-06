@@ -1,4 +1,4 @@
-from os import system
+from os import closerange, system
 import turtle
 import time
 import p2
@@ -9,7 +9,15 @@ x = 0
 screen.bgpic("background1.gif")
 time.sleep(2)
 tree = ("best-tree.gif")
+onion = ("onions.gif")
+corn = ("corn.gif")
+lettuce = ("lettuce.gif")
+tomato = ("tomato.gif")
+steak = ("steak for tacos.gif")
+chicken = ("chicken for taco.gif")
 screen.addshape(tree)
+screen.addshape(onion)
+screen.addshape(corn)
 
 screen.bgpic("background2.gif")
 screen.update()
@@ -47,21 +55,24 @@ screen.bgpic("nopic")
 
 
 bob = turtle.Turtle()
-
+bob.hideturtle()
+bob.penup()
+bob.goto(80,100)
 def display_points(points,dollars):
   bob.clear()
   bob.pendown()
-  bob.write(points)
+  bob.write(str(points)+"pts",font=("arial",30,"normal"))
   bob.penup()
-  bob.backward(90)
+  bob.backward(200)
   bob.pendown()
-  bob.write(dollars)
-  bob.forward(90)
+  bob.write("$"+str(dollars),font=("arial",30,"normal"))
+  bob.penup()
+  bob.forward(200)
 
 def main():
 
   
-  p2.start_function(tree_list, tree)
+  p2.start_function(tree_list, tree, onion,screen,corn,chicken,lettuce,steak,tomato)
   p2.end_function()
 
 

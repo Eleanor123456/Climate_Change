@@ -5,14 +5,15 @@ from main import display_points
 
 points = 10
 dollars = 100
+food_type = 0
 
-def start_function(tree_list, tree):
+def start_function(tree_list, tree,onion,screen,corn,chicken,lettuce,steak,tomato):
   print("Welcome to the game!\n\nWould you like to play part 1 or part 2?")
   answer=input("Type PART 1 for part 1")
   if answer=="PART 1":
     part_1function(tree_list, tree)
   if answer=="PART 2":
-    part_2function()
+    part_2function(onion,screen,corn,chicken,lettuce,steak,tomato)
     
 
 def end_function():
@@ -23,11 +24,14 @@ def end_function():
   answer=input("Type PART 2 for part 2")
 
 
-def part_2function():
+def part_2function(onion,screen,corn,chicken,lettuce,steak,tomato):
   global points
   global dollars
+  global food_type
+  screen.bgpic("hard taco shell.gif")
+  print("Welcome to your new taco restaurant! You can earn points and money. you earn points when you do something that reduces food waste, and you earn money when you do something that saves money.")
   print("Do you take time to plan a grocery list(option A) or go straight to the store (option B)")
-  answer = input("\nType your answer here ")
+  answer = input("\nType your answer here(A or B)")
   if answer == "A":
     system("clear")
     print("you gain 10pts and $10")
@@ -72,6 +76,7 @@ def part_2function():
   if answer2 == "1":
     system("clear")
     print("At the store you find tomatoes that are misshapen and cheaper than the other tomatoes. Do you buy them (A) or not (B)")
+    answer = input("\nType your answer here ")
     if answer == "A":
       system("clear")
       print("you gain 10pts and $10")
@@ -87,6 +92,7 @@ def part_2function():
   if answer2 == "1":
     system("clear")
     print("you cut up some veggies do you chose to leave them on the counter(A) or put them in the fridge(B)")
+    answer = input("\nType your answer here ")
     if answer == "A":
       system("clear")
       print("you lose 10pts")
@@ -99,6 +105,7 @@ def part_2function():
   if answer2 == "1":
     system("clear")
     print("It is almost time to close the restaurant and you have lots of food left do you want to give it away for free(A) or not(B)")
+    answer = input("\nType your answer here ")
     if answer == "A":
       system("clear")
       print("you gain 10pts and lose $10")
@@ -113,6 +120,7 @@ def part_2function():
   if answer2 == "1":
     system("clear")
     print("You still have food left over do you choose to throw it away (A) or freeze it (B)")
+    answer = input("\nType your answer here ")
     if answer == "A":
       system("clear")
       print("you lost 10pts")
@@ -309,4 +317,22 @@ def part_1function(tree_list, tree):
                   if answer == "1":
                     system("clear")
                     print("THE END OF PART 1!!\nThank you for playing")
+
+def rat(click):
+  click = click+1
+  joe.pendown()
+  joe.write(click)
+  joe.forward(90)
+def tacoChef(onion,screen,corn,chicken,lettuce,steak,tomato):
+  global food_type
+  click = 0
+  joe = turtle.Turtle()
+  food_type = food_type+1
+  joe.shape(onion)
+  screen.delay(3000)
+  joe.shape(corn)
+  joe.onclick(rat)
+
+  
+
     
